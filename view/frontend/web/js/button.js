@@ -34,10 +34,11 @@ define(
                     cartData = customerData.get('cart'),
                     items = cartData().items,
                     csvHeader = 'Name,Price,SKU,URL,Qty',
-                    csvBody = '',
                     self = this;
 
                 $this.on('click', function (event) {
+                    var csvBody = '';
+
                     items.forEach(function (item, index) {
                         csvBody += item.product_name + ','
                             + item.product_price_value + ','

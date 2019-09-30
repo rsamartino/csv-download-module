@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Rich\CartCsv\Block\DownloadButton">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="template" xsi:type="string">Rich_CartCsv::minicart-button.phtml</item>
+                <item name="alias" xsi:type="string">cartcsv.button.mini-cart</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

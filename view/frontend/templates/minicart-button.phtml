@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @var \Rich\CartCsv\Block\DownloadButton $block
+ */
+
+$id = 'csv-download-button-' . random_int(0, PHP_INT_MAX);
+
+$config = [
+    'Rich_CartCsv/js/button' => [
+            'id' => $id
+    ]
+];
+
+?>
+<div data-mage-init='<?= /* @noEscape */ json_encode($config) ?>'
+     class="csv-download-button">
+    <button id="<?= /* @noEscape */ $id ?>">
+        <span>Download CSV of items</span>
+    </button>
+</div>

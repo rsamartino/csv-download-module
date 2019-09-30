@@ -15,6 +15,12 @@ class DownloadButton extends Template implements ShortcutInterface
      */
     private $config;
 
+    /**
+     * DownloadButton constructor.
+     * @param Config $config
+     * @param Template\Context $context
+     * @param array $data
+     */
     public function __construct(
         Config $config,
         Template\Context $context,
@@ -26,7 +32,9 @@ class DownloadButton extends Template implements ShortcutInterface
         $this->config = $config;
     }
 
-
+    /**
+     * @inheritdoc
+     */
     public function getAlias()
     {
         return $this->getData(self::ALIAS_ELEMENT_INDEX);

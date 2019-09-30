@@ -22,6 +22,9 @@ class Config
         $this->scopeConfig = $scopeConfig;
     }
 
+    /**
+     * @return bool
+     */
     public function isDownloadButtonEnabled()
     {
         return (bool) $this->scopeConfig->getValue(self::XML_PATH_DISPLAY_DOWNLOAD_BUTTON);

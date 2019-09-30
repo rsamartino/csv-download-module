@@ -27,6 +27,9 @@ define(
             },
 
             /**
+             * construct csv string on button click;
+             * call function to download it
+             *
              * @returns {Object}
              */
             initComponent: function () {
@@ -54,12 +57,17 @@ define(
                 return this;
             },
 
+            /**
+             * create Blob from csv string;
+             * click hidden element to download in browser
+             *
+             * @param csv
+             */
             downloadCsv: function (csv) {
                 var blob = new Blob([csv], { type: 'text/csv' }),
                     hiddenElement = document.createElement('a');
 
                 hiddenElement.href = window.URL.createObjectURL(blob);
-                hiddenElement.target = '_blank';
                 hiddenElement.download = 'cartItems.csv';
 
                 document.body.appendChild(hiddenElement);
